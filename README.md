@@ -31,6 +31,7 @@ We implemented and compared four different approaches:
 - Random Forest Regressor: An ensemble method using Bagging.
 - Support Vector Regressor (SVR): Using the RBF kernel to handle non-linearity.
 - Long Short-Term Memory (LSTM): A Deep Learning model specialized for time-series data.
+- Gated Recurrent Unit (GRU): A recurrent neural network architecture similar to LSTM, with fewer parameters, implemented as an alternative deep learning approach and trained on the same data.
 
 ## Results and Performance
 
@@ -60,7 +61,20 @@ Model: LSTM (Deep Learning)
 - R2: 0.8630
 - NASA Score: 413.49
 
-In conclusion, The LSTM model obviously outperforms the other approaches byachieving the lowest error, with a RMSE 15.38, and the best NASA Score by far, NASA Score: 413.49, thus demonstrating its ability to capture temporal degradation patterns.
+In conclusion, the LSTM model outperforms the other approaches by achieving the lowest error, with an RMSE of 15.38 cycles and the best NASA Score, demonstrating its ability to capture temporal degradation patterns.
+The GRU model provides a complementary recurrent architecture, allowing a comparison between two deep learning approaches for time-series degradation modeling.
+
+## GRU Extension and Model Comparison
+
+In addition to the LSTM model, a GRU-based deep learning model was implemented.
+The GRU model was trained using the same preprocessing pipeline, time windowing strategy, and evaluation protocol.
+
+Model performance was compared using RMSE on the test set, and qualitative analysis was performed using:
+- Training and validation loss curves
+- Visualization of predicted RUL versus true RUL values
+
+This comparison highlights the relative performance and learning behavior of both recurrent architectures.
+
 
 ## Installation and Usage
 
